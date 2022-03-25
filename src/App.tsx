@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import './App.css'
+import { AppButton, Card, Input } from '@nikhil-tayal/ui-lib-2'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <Card>
+        <h1>Enter your details</h1>
+        <Input variant='outlined' label='Enter your First Name ' />
+        <br />
+        <Input variant='standard' label='Enter your Last Name ' />
+        <br />
+        <Input variant='filled' label='Enter your Password ' type='password' />
+        <br />
+        <AppButton color='primary' variant='contained' onClick={() => alert('Data Saved')}>
+          Button
+        </AppButton>
+      </Card>
     </div>
   );
 }
